@@ -3,4 +3,3 @@
 <img width="338px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ivangong24&hide=html,Tex,JavaScript&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /> </div> 
 <div align="left"> <a href="https://git.io/streak-stats"> <img width="395px" src="https://streak-stats.demolab.com/?user=ivangong24&theme=gotham" /> </a> <img width="445px" src="https://github-readme-activity-graph.vercel.app/graph?username=ivangong24&theme=react-dark" /> </div>
 <div align="right"> <img src="https://komarev.com/ghpvc/?username=ivangong24" /> </div>
-"https://streak-stats.demolab.com/?user=DenverCoder1&theme=dark" alt="GitHub Streak"
