@@ -1,0 +1,48 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily, off the hour to avoid GitHub's peak-load throttling
+  workflow_dispatch:
+
+# Only one run at a time — concurrent runs would race on the commit.
+concurrency:
+  group: readme-cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: "username=${{ github.repository_owner }}&hide_title=true&hide_border=true&show_icons=true&line_height=21&text_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite"
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Fail loudly instead of overwriting a good card with an error card.
+          fail_on_error: "true"
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: "username=${{ github.repository_owner }}&hide=html,Tex,JavaScript&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite"
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update README cards" || exit 0
+          git push
