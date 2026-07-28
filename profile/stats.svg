@@ -8,7 +8,7 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Yufan Gong's GitHub Stats, Rank: C</title>
+        <title id="titleId">Yufan Gong&#39;s GitHub Stats, Rank: C</title>
         <desc id="descId">Total Stars Earned: 1, Total Commits  (last year) : 96, Total PRs: 9, Total Issues: 2, Contributed to (last year): 2</desc>
         <style>
           .header {
