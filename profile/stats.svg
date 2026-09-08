@@ -78,6 +78,7 @@
     }
   
   
+          
 
           
       /* Animations */
@@ -103,6 +104,7 @@
 
         
         <defs>
+          
           <linearGradient
             id="gradient"
             gradientTransform="rotate(0)"
@@ -110,11 +112,13 @@
           >
             <stop offset="0%" stop-color="#ea6161" />,<stop offset="33.333333333333336%" stop-color="#ffc64d" />,<stop offset="66.66666666666667%" stop-color="#fffc4d" />,<stop offset="100%" stop-color="#52fa5a" />
           </linearGradient>
+          
         </defs>
         
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"

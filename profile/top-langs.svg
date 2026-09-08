@@ -59,7 +59,9 @@
     .lang-progress{
       animation: growWidthAnimation 0.6s ease-in-out forwards;
     }
+    .progress-background { fill: #ddd; }
     
+          
 
           
       /* Animations */
@@ -85,6 +87,7 @@
 
         
         <defs>
+          
           <linearGradient
             id="gradient"
             gradientTransform="rotate(0)"
@@ -92,11 +95,13 @@
           >
             <stop offset="0%" stop-color="#52fa5a" />,<stop offset="50%" stop-color="#4dfcff" />,<stop offset="100%" stop-color="#c64dff" />
           </linearGradient>
+          
         </defs>
         
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"
